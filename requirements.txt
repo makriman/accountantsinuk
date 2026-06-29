@@ -1,0 +1,4 @@
+# Lead-gen scrapers. The CRM-push scripts use only the Python standard library.
+playwright>=1.40        # lead-gen/scrape_maps.py  (then: playwright install chromium)
+requests>=2.31          # lead-gen/scrape_websites.py
+beautifulsoup4>=4.12    # lead-gen/scrape_websites.py

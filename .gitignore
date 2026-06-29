@@ -1,0 +1,48 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# NEVER commit lead data, scraped output, secrets, or CRM caches.
+# This repo ships CODE and DOCS only. Your data stays on your machine.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Secrets / tokens
+.env
+.hs_env
+*.pem
+*.key
+
+# HubSpot import cache + logs (contain real ids / contact data)
+.hs_cache.json
+.hs_cache.json.tmp
+hs_failures*.log
+hs_failures*.bak
+
+# Lead data you generate (the canonical dataset + all source/scrape files)
+leads.js
+crm-push/leads.js
+*enriched*.csv
+*businesses*.csv
+*contacts*.csv
+*targets*.csv
+not_found.csv
+*.db
+*.db-wal
+*.db-shm
+batch_*.done
+
+# Spreadsheets / exports (often hold real or confidential records)
+*.xlsx
+*.xls
+
+# Anything in a local data/ or output/ dir
+/data/
+/output/
+enrich_lookalikes.json
+
+# OS / editor / local tooling
+.DS_Store
+.claude/
+.venv/
+__pycache__/
+*.pyc
+
+# The sample dataset IS meant to be committed — keep it tracked.
+!examples/leads.sample.js
